@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+       <!-- Required meta tags -->
+       <meta http-equiv="Content-Type" charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <meta name="Description" content="">
+       
+       <!-- Other Assets -->
+       <link rel="icon"
+              type="image/png"
+              href="https://rillyvisuals.com/icon.png">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       <!-- Bootstrap CSS -->
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+       <link rel="stylesheet" href="../css/Admin.css">
+       <link href="https://fonts.googleapis.com/css?family=Abel|Cookie|Open+Sans+Condensed:300|Roboto:300|Varela+Round" rel="stylesheet">
+       
+       <title>Admin | Gallery </title>
+    </head>
+
+    <body>
+
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #000000;">
+        <div class="container">
+                <a class="navbar-brand">
+              <img src="../icon.png" width="50" height="50" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="../Admin/AdminMenuGallery.html">Edit Gallery</a>
+                    <span class="sr-only">(current)</span>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Admin/AdminMenuBookings.html">Check Bookings</a>
+                  </li>
+                </ul>
+                <a class="btn btn-default" onclick="signout()">Sign out</a>
+              </div>
+              </div>
+            </nav>
+
+
+        <div class="container-fluid">
+                <div class="container">
+                        <div id="Bookings" class="LoadedBookings">
+                            <h2 class="text-center">GALLERY</h2>
+
+                            <form>
+                                    <div class="form-group">
+                                      <label for="uploadPhoto">Upload to Gallery</label>
+                                      <input type="file" accept=".png, .jpg, .jpeg" class="form-control-file" id="photoSelect">
+                                      <br>
+                                      <progress id="percentUploaded" value="0" max="100">0%</progress>
+                                      <br>
+                                    </div>
+                                  </form>
+                        </div>
+
+                        <hr class="featurette-divider">
+                        <div id="ImageGallery" >
+
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+        <hr class="featurette-divider">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <script src="../Admin/login.js"></script>
+        <script src="../Admin/upload.js"></script>
+
+
+          
+    </body>
+
+
+</html>

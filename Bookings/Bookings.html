@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+       <!-- Required meta tags -->
+       <meta http-equiv="Content-Type" charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <meta name="Description" content="">
+       
+       <!-- Other Assets -->
+       <link rel="icon"
+              type="image/png"
+              href="https://rillyvisuals.com/icon.png">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+       <!-- Bootstrap CSS -->
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+       <link rel="stylesheet" href="../css/bookings.css">
+       <link href="https://fonts.googleapis.com/css?family=Abel|Cookie|Open+Sans+Condensed:300|Roboto:300|Varela+Round" rel="stylesheet">
+       
+       <title>Rilly Visuals | Book A Session With Us </title>
+
+    <body>
+
+        <!-- NAVIGATION -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #000000;">
+                <div class="container">
+              <a class="navbar-brand" href="/">
+              <img src="../icon.png" width="50" height="50" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
+              aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/">Home 
+                      </a>
+                  </li>
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services
+                      
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="../Services/Photography.html"> Photography </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="../Services/GraphicDesign.html"> Graphic Design </a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Gallery/Gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../About.html">About
+                    </a>
+                  </li>
+                </ul>
+                <a class="btn btn-default" href="../Bookings/Bookings.html">
+                    <span class="network-name"> Book Now </span></a>
+              </div>
+            </div>
+            </nav>
+
+
+            <!-- BOOKING FORM -->
+            <div class="book">
+                    <div class="container">
+                            <div class="row">
+                                <div class="booking-form">
+                                    <form id="bookingForm" novalidate>
+        
+                                        <!-- Name Section -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label> First Name </label>
+                                                <input type="text" class="form-control" id="customerFName" placeholder="First Name" required data-validation-required-message="Please enter your First name.">
+                                            </div>
+        
+                                            <div class="form-group col-md-4">
+                                                <label> Last Name </label>
+                                                <input type="text" class="form-control" id="customerLName" placeholder="Last Name" required data-validation-required-message="Please enter your Last name.">
+                                            </div>
+                                        </div>
+                                        <br>
+                                        
+                                        <!-- Contact Section -->
+                                        <div class="form-row">
+        
+                                            <div class="form-group col-md-4">
+                                                <label> Email </label>
+                                                <input type="email" class="form-control" id="customerEmail" placeholder="Email" required data-validation-required-message="Please enter your email.">
+                                            </div>
+        
+                                            <div class="form-group col-md-3">
+                                                <label> Phone </label>
+                                                <input type="tel" class="form-control" id="phonenumber" placeholder="Phone" required data-validation-required-message="Please enter your name.">
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                        <label> Instagram </label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                            </div>
+                                                        <input type="text" class="form-control" id="customerIGName" placeholder="Username" required data-validation-required-message="Please enter your Username.">    
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="form-group col-md-4">
+                                                            <label> Preference </label>
+                                                                <select class="form-control" id="contactSelect">
+                                                                    <option>Choose...</option>
+                                                                    <option>Email</option>
+                                                                    <option>Instagram</option>
+                                                                    <option> Text </option>
+                                                                </select>
+                                                            <small> How do you want us to contact you? </small>
+                                                        </div>
+                                        </div>
+                                        <br>
+        
+                                        <!-- Service Section -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label> Service </label>
+                                                    <select class="form-control" id="serviceSelect">
+                                                        <option>Choose...</option>
+                                                        <option>Portraits</option>
+                                                        <option>Coperate</option>
+                                                        <option>Grad</option>
+                                                        <option>Wedding</option>
+                                                        <option>Automobile</option>
+                                                        <option>Graphic Design</option>
+                                                        <option>Logo Design</option>
+                                                        <option>Banner Design</option>
+                                                    </select>
+                                            </div>
+        
+                                            <!-- DATE SELECTOR -->
+                                            <div class="form-group col-md-4">
+                                                    <label> Date </label>
+                                                    <input type="date" class="form-control" id="datepicker" placeholder="Date" required data-validation-required-message="Please select a date.">
+                                                    <small> For photoshoot, When do you want the shoot done?</small>
+                                            </div>
+                                        </div>
+        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label> City </label>
+                                                        <input type="text" class="form-control" id="city" placeholder="City" required data-validation-required-message="Please enter the city where you want to shoot.">
+                                                        <small> For photoshoot, Which city do you want the shoot done?</small>
+                                                    </div>
+                                
+                                                    
+                                        </div>
+        
+                                        <div class="form-row">
+                                            <div class="form-group col-lg-8">
+                                                <label> Message </label>
+                                                <textarea class="form-control" id="message" rows="4" placeholder="Message"></textarea>
+                                                <small> Tell us a little bit about your booking</small>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div id="success"></div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-default" id="sendFormButton"> Submit </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+                
+          
+
+          <hr class="featurette-divider">
+
+          <!-- FOOTER SOCIAL LINKS -->
+          <footer>
+          <div class="container">
+              <div class="footer-stuff justify-content-center">
+          <ul class="list-inline banner-social-buttons mastheader">
+              <li class="list-inline-item">
+                  <a href="https://instagram.com/rillyvisuals" class="btn btn-default btn-sm">
+                      <i class="fa fa-instagram fa-fw"></i>
+                  </a>
+              </li>
+      
+              <li class="list-inline-item">
+                  <a href="https://facebook.com/rillyvisuals" class="btn btn-default btn-sm">
+                      <i class="fa fa-facebook-square fa-fw"></i>
+                  </a>
+              </li>
+      
+              <li class="list-inline-item">
+                  <a href="https://twitter.com/rillyvisuals" class="btn btn-default btn-sm">
+                      <i class="fa fa-twitter-square fa-fw"></i>
+                  </a>
+              </li>
+          </ul>
+        </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <script src="../Bookings/Bookings.js"></script>
+
+
+          
+    </body>
+
+
+</html>

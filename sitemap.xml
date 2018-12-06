@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        >
+ 
+<url>
+  <loc>https://rillyvisuals.com</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/About</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Services/GraphicDesign</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Services/Photography</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Abstract</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Automobile</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Commercial</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Graduation</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Portraits</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Travel</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Gallery/Wedding</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://rillyvisuals.com/Bookings/Bookings</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.5</priority>
+</url>
+</urlset>
